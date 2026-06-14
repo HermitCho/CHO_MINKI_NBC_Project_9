@@ -1,0 +1,6 @@
+Breadcrumbs 'Parallel'
+ - ClearLumenSurfaceCache
+ - LumenSceneUpdate: 0 card captures 0.000M texels
+ - Scene
+ - FRDGBuilder::Execute
+ - Frame 56

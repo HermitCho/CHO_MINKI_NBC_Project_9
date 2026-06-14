@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\UnrealEngine\\NBC_Project_9\\BullsAndCows\\Source\\BullsAndCows\\BullsAndCows.Build.cs",
+		"D:\\UnrealEngine\\NBC_Project_9\\BullsAndCows\\Source\\BullsAndCows.Target.cs",
+		"D:\\UnrealEngine\\NBC_Project_9\\BullsAndCows\\Source\\BullsAndCowsEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}

@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "BullsAndCows",
+			"Path": "..\\Source\\BullsAndCows.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "BullsAndCowsEditor",
+			"Path": "..\\Source\\BullsAndCowsEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/UI/WBP_MatchFoundWidget.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/UI/WBP_MatchQueueWidget.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Level/Title.umap",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/GameMode/BP_TitleGameMode.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/PlayerController/BP_BullCowPlayerController.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/UI/WBP_EndGameUserWidget.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/UI/WBP_BullCowUserWidget.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/PlayerState/BP_PlayerState.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/GameState/BP_BullCowGameState.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/GameMode/BP_BullCowGameMode.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/UI/WBP_TitleUserWidget.uasset",
+				"D:/UnrealEngine/NBC_Project_9/BullsAndCows/Content/Blueprint/PlayerState/BP_BullCowPlayerState.uasset"
+			]
+		}
+	]
+}

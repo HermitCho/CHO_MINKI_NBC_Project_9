@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\BullsAndCows.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BullsAndCows.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\BullsAndCowsEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\BullsAndCows">
+      <UniqueIdentifier>{3B99A008-ECE1-3764-892B-0627C40B70FD}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BullsAndCows\BullsAndCows.Build.cs">
+      <Filter>Source\BullsAndCows</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\BullsAndCows\BullsAndCows.cpp">
+      <Filter>Source\BullsAndCows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\BullsAndCows.h">
+      <Filter>Source\BullsAndCows</Filter>
+    </ClCompile>
+    <Filter Include="Source\BullsAndCows\GameMode">
+      <UniqueIdentifier>{02014363-15D0-347A-9420-525EA596E441}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameMode\BullCowGameModeBase.cpp">
+      <Filter>Source\BullsAndCows\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameMode\BullCowGameModeBase.h">
+      <Filter>Source\BullsAndCows\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameMode\TitleGameModeBase.cpp">
+      <Filter>Source\BullsAndCows\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameMode\TitleGameModeBase.h">
+      <Filter>Source\BullsAndCows\GameMode</Filter>
+    </ClCompile>
+    <Filter Include="Source\BullsAndCows\GameState">
+      <UniqueIdentifier>{D61F3224-70A1-3170-B05C-93D3B4016290}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameState\BullCowGameStateBase.cpp">
+      <Filter>Source\BullsAndCows\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameState\BullCowGameStateBase.h">
+      <Filter>Source\BullsAndCows\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameState\TitleGameState.cpp">
+      <Filter>Source\BullsAndCows\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\GameState\TitleGameState.h">
+      <Filter>Source\BullsAndCows\GameState</Filter>
+    </ClCompile>
+    <Filter Include="Source\BullsAndCows\PlayerController">
+      <UniqueIdentifier>{B607E7BE-C7B6-35BF-B9FF-91993E1DC452}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BullsAndCows\PlayerController\BullCowPlayerController.cpp">
+      <Filter>Source\BullsAndCows\PlayerController</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\PlayerController\BullCowPlayerController.h">
+      <Filter>Source\BullsAndCows\PlayerController</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\PlayerController\TitlePlayerController.cpp">
+      <Filter>Source\BullsAndCows\PlayerController</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\PlayerController\TitlePlayerController.h">
+      <Filter>Source\BullsAndCows\PlayerController</Filter>
+    </ClCompile>
+    <Filter Include="Source\BullsAndCows\PlayerState">
+      <UniqueIdentifier>{553D0B90-F35C-3834-8282-83344F676667}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BullsAndCows\PlayerState\BullCowPlayerState.cpp">
+      <Filter>Source\BullsAndCows\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\PlayerState\BullCowPlayerState.h">
+      <Filter>Source\BullsAndCows\PlayerState</Filter>
+    </ClCompile>
+    <Filter Include="Source\BullsAndCows\UI">
+      <UniqueIdentifier>{FA768170-2C9D-382F-9F2F-83BAA35514DB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\BullCowUserWidget.cpp">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\BullCowUserWidget.h">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\EndGameUserWidget.cpp">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\EndGameUserWidget.h">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\MatchFoundWidget.cpp">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\MatchFoundWidget.h">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\MatchQueueWidget.cpp">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\MatchQueueWidget.h">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\TitleUserWidget.cpp">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\BullsAndCows\UI\TitleUserWidget.h">
+      <Filter>Source\BullsAndCows\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
