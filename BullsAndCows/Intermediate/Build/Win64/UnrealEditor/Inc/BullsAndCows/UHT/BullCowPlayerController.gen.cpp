@@ -210,6 +210,41 @@ DEFINE_FUNCTION(ABullCowPlayerController::execClientRPCShowEndGameUserWidget)
 }
 // End Class ABullCowPlayerController Function ClientRPCShowEndGameUserWidget
 
+// Begin Class ABullCowPlayerController Function Server_RequestReturnToTitle
+static const FName NAME_ABullCowPlayerController_Server_RequestReturnToTitle = FName(TEXT("Server_RequestReturnToTitle"));
+void ABullCowPlayerController::Server_RequestReturnToTitle()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ABullCowPlayerController_Server_RequestReturnToTitle);
+	ProcessEvent(Func,NULL);
+}
+struct Z_Construct_UFunction_ABullCowPlayerController_Server_RequestReturnToTitle_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerController/BullCowPlayerController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABullCowPlayerController_Server_RequestReturnToTitle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABullCowPlayerController, nullptr, "Server_RequestReturnToTitle", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00220CC0, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABullCowPlayerController_Server_RequestReturnToTitle_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABullCowPlayerController_Server_RequestReturnToTitle_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ABullCowPlayerController_Server_RequestReturnToTitle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABullCowPlayerController_Server_RequestReturnToTitle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABullCowPlayerController::execServer_RequestReturnToTitle)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Server_RequestReturnToTitle_Implementation();
+	P_NATIVE_END;
+}
+// End Class ABullCowPlayerController Function Server_RequestReturnToTitle
+
 // Begin Class ABullCowPlayerController Function Server_SendChatMessage
 struct BullCowPlayerController_eventServer_SendChatMessage_Parms
 {
@@ -272,6 +307,7 @@ void ABullCowPlayerController::StaticRegisterNativesABullCowPlayerController()
 		{ "Client_UpdateNotification", &ABullCowPlayerController::execClient_UpdateNotification },
 		{ "ClientRPCReturnToTitle", &ABullCowPlayerController::execClientRPCReturnToTitle },
 		{ "ClientRPCShowEndGameUserWidget", &ABullCowPlayerController::execClientRPCShowEndGameUserWidget },
+		{ "Server_RequestReturnToTitle", &ABullCowPlayerController::execServer_RequestReturnToTitle },
 		{ "Server_SendChatMessage", &ABullCowPlayerController::execServer_SendChatMessage },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -327,6 +363,7 @@ struct Z_Construct_UClass_ABullCowPlayerController_Statics
 		{ &Z_Construct_UFunction_ABullCowPlayerController_Client_UpdateNotification, "Client_UpdateNotification" }, // 1852166077
 		{ &Z_Construct_UFunction_ABullCowPlayerController_ClientRPCReturnToTitle, "ClientRPCReturnToTitle" }, // 3949010325
 		{ &Z_Construct_UFunction_ABullCowPlayerController_ClientRPCShowEndGameUserWidget, "ClientRPCShowEndGameUserWidget" }, // 2492983670
+		{ &Z_Construct_UFunction_ABullCowPlayerController_Server_RequestReturnToTitle, "Server_RequestReturnToTitle" }, // 2807370540
 		{ &Z_Construct_UFunction_ABullCowPlayerController_Server_SendChatMessage, "Server_SendChatMessage" }, // 3123792198
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -400,10 +437,10 @@ ABullCowPlayerController::~ABullCowPlayerController() {}
 struct Z_CompiledInDeferFile_FID_BullsAndCows_Source_BullsAndCows_PlayerController_BullCowPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABullCowPlayerController, ABullCowPlayerController::StaticClass, TEXT("ABullCowPlayerController"), &Z_Registration_Info_UClass_ABullCowPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABullCowPlayerController), 1642573575U) },
+		{ Z_Construct_UClass_ABullCowPlayerController, ABullCowPlayerController::StaticClass, TEXT("ABullCowPlayerController"), &Z_Registration_Info_UClass_ABullCowPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABullCowPlayerController), 1456830659U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BullsAndCows_Source_BullsAndCows_PlayerController_BullCowPlayerController_h_1305940846(TEXT("/Script/BullsAndCows"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BullsAndCows_Source_BullsAndCows_PlayerController_BullCowPlayerController_h_2386209794(TEXT("/Script/BullsAndCows"),
 	Z_CompiledInDeferFile_FID_BullsAndCows_Source_BullsAndCows_PlayerController_BullCowPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BullsAndCows_Source_BullsAndCows_PlayerController_BullCowPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

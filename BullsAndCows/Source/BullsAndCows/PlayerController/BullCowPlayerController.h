@@ -37,6 +37,9 @@ public:
 	UFUNCTION(Client, Reliable)
 	void Client_UpdateNotification(const FString& NewNotification);
 
+	UFUNCTION(Server, Reliable)
+	void Server_RequestReturnToTitle();
+
 public:
 	UPROPERTY(Replicated, VisibleAnywhere, BlueprintReadWrite, Category = "Gameplay")
 	int32 PlayerScore = 0;

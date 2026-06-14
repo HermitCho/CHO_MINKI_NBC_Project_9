@@ -12,6 +12,7 @@
 #include "GameMode/BullCowGameModeBase.h"
 #include "BullsAndCows.h"
 #include "Engine/Engine.h"
+#include "GameMode/BullCowGameModeBase.h"
 
 void ABullCowPlayerController::BeginPlay()
 {
@@ -88,6 +89,17 @@ void ABullCowPlayerController::PrintChatMessageString(const FString& InChatMessa
 	if (IsValid(BullCowUserWidgetInstance))
 	{
 		BullCowUserWidgetInstance->AddChatMessage(InChatMessageString);
+	}
+}
+
+void ABullCowPlayerController::Server_RequestReturnToTitle_Implementation()
+{
+	ABullCowGameModeBase* GM = GetWorld()->GetAuthGameMode<ABullCowGameModeBase>();
+	if (IsValid(GM))
+	{
+		GetWorld()->GetTimerManager().ClearTimer(GM->MainTimerHandle);
+
+		GetWorld()->ServerTravel(TEXT("Title?listen"));
 	}
 }
 

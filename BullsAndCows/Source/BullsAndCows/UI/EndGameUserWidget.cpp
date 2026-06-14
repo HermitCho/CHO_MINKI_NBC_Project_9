@@ -6,6 +6,7 @@
 #include "Components/TextBlock.h"
 #include "Components/Button.h"
 #include "Kismet/GameplayStatics.h"
+#include "PlayerController/BullCowPlayerController.h"
 
 void UEndGameUserWidget::NativeConstruct()
 {
@@ -27,7 +28,11 @@ void UEndGameUserWidget::NativeConstruct()
 
 void UEndGameUserWidget::OnReturnButtonClicked()
 {
-	UGameplayStatics::OpenLevel(this, FName("Title"));
+	ABullCowPlayerController* PC = Cast<ABullCowPlayerController>(GetOwningPlayer());
+	if (IsValid(PC))
+	{
+		PC->Server_RequestReturnToTitle();
+	}
 }
 
 void UEndGameUserWidget::SetEndGameResult(const FString& ResultString)

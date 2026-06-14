@@ -183,7 +183,7 @@ void ABullCowGameModeBase::OnMainTimerElapsed()
 		if (RemainWaitingTimeForEnding <= 0)
 		{
 			MainTimerHandle.Invalidate();
-			GetWorld()->ServerTravel(TEXT("Title"));
+			GetWorld()->ServerTravel(TEXT("Title?listen"));
 			return;
 		}
 		break;

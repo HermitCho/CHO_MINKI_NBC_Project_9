@@ -15,11 +15,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BULLSANDCOWS_BullCowPlayerController_generated_h
 
 #define FID_BullsAndCows_Source_BullsAndCows_PlayerController_BullCowPlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void Server_RequestReturnToTitle_Implementation(); \
 	virtual void Client_UpdateNotification_Implementation(const FString& NewNotification); \
 	virtual void Client_ReceiveChatMessage_Implementation(const FString& InMessage); \
 	virtual void Server_SendChatMessage_Implementation(const FString& InMessage); \
 	virtual void ClientRPCReturnToTitle_Implementation(); \
 	virtual void ClientRPCShowEndGameUserWidget_Implementation(int32 Rank); \
+	DECLARE_FUNCTION(execServer_RequestReturnToTitle); \
 	DECLARE_FUNCTION(execClient_UpdateNotification); \
 	DECLARE_FUNCTION(execClient_ReceiveChatMessage); \
 	DECLARE_FUNCTION(execServer_SendChatMessage); \
