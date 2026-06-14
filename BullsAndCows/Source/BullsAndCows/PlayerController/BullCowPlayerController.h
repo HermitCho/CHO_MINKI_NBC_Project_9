@@ -40,6 +40,9 @@ public:
 	UFUNCTION(Server, Reliable)
 	void Server_RequestReturnToTitle();
 
+protected:
+	class UBullCowUserWidget* GetOrCreateInGameUI();
+
 public:
 	UPROPERTY(Replicated, VisibleAnywhere, BlueprintReadWrite, Category = "Gameplay")
 	int32 PlayerScore = 0;

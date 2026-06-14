@@ -13,7 +13,7 @@ ABullCowGameModeBase::ABullCowGameModeBase()
 {
 	bUseSeamlessTravel = true;
 	WaitingTime = 5;
-	InGameTime = 30;
+	InGameTime = 180;
 }
 
 void ABullCowGameModeBase::BeginPlay()

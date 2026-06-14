@@ -28,21 +28,7 @@ void ABullCowPlayerController::BeginPlay()
 	SetInputMode(OnlyInputUIMode);
 	bShowMouseCursor = true;
 
-	if (!IsValid(BullCowUserWidgetClass))
-	{
-		UE_LOG(LogTemp, Error, TEXT("BullCowUserWidgetClass가 Null입니다."));
-		return;
-	}
-
-	BullCowUserWidgetInstance = CreateWidget<UBullCowUserWidget>(this, BullCowUserWidgetClass);
-
-	if (!IsValid(BullCowUserWidgetInstance))
-	{
-		UE_LOG(LogTemp, Error, TEXT("BullCowUserWidgetInstance가 Null입니다."));
-		return;
-	}
-
-	BullCowUserWidgetInstance->AddToViewport();
+	GetOrCreateInGameUI();
 }
 
 void ABullCowPlayerController::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -74,21 +60,23 @@ void ABullCowPlayerController::Server_SendChatMessage_Implementation(const FStri
 //서버에서 온 채팅 결과를 UI에 전달
 void ABullCowPlayerController::Client_ReceiveChatMessage_Implementation(const FString& InMessage)
 {
-	if (IsValid(BullCowUserWidgetInstance))
+	UBullCowUserWidget* SafeWidget = GetOrCreateInGameUI();
+	if (IsValid(SafeWidget))
 	{
-		BullCowUserWidgetInstance->AddChatMessage(InMessage);
+		SafeWidget->AddChatMessage(InMessage);
 	}
 	else
 	{
-		BC_LOG_NET(LogDXNet, Error, TEXT("[Error] BullCowUserWidgetInstance가 Null입니다."));
+		BC_LOG_NET(LogDXNet, Error, TEXT("[Error] BullCowUserWidgetInstance 생성 실패!"));
 	}
 }
 
 void ABullCowPlayerController::PrintChatMessageString(const FString& InChatMessageString)
 {
-	if (IsValid(BullCowUserWidgetInstance))
+	UBullCowUserWidget* SafeWidget = GetOrCreateInGameUI();
+	if (IsValid(SafeWidget))
 	{
-		BullCowUserWidgetInstance->AddChatMessage(InChatMessageString);
+		SafeWidget->AddChatMessage(InChatMessageString);
 	}
 }
 
@@ -105,9 +93,10 @@ void ABullCowPlayerController::Server_RequestReturnToTitle_Implementation()
 
 void ABullCowPlayerController::ClientRPCShowEndGameUserWidget_Implementation(int32 Rank)
 {
-	if (IsValid(BullCowUserWidgetInstance))
+	UBullCowUserWidget* SafeWidget = GetOrCreateInGameUI();
+	if (IsValid(SafeWidget))
 	{
-		BullCowUserWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
+		SafeWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 
 	if (IsValid(EndGameUserWidgetClass))
@@ -144,12 +133,28 @@ void ABullCowPlayerController::ClientRPCReturnToTitle_Implementation()
 	
 void ABullCowPlayerController::Client_UpdateNotification_Implementation(const FString& NewNotification)
 {
-	if (IsValid(BullCowUserWidgetInstance))
+	UBullCowUserWidget* SafeWidget = GetOrCreateInGameUI();
+
+	if (IsValid(SafeWidget))
 	{
-		BullCowUserWidgetInstance->UpdateNotificationText(NewNotification);
+		SafeWidget->UpdateNotificationText(NewNotification);
 	}
-	else
+}
+
+UBullCowUserWidget* ABullCowPlayerController::GetOrCreateInGameUI()
+{
+	if (!IsValid(BullCowUserWidgetInstance))
 	{
-		if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("[에러] BullCowUserWidgetInstance가 NULL입니다!!"));
+		if (IsValid(BullCowUserWidgetClass))
+		{
+			BullCowUserWidgetInstance = CreateWidget<UBullCowUserWidget>(this, BullCowUserWidgetClass);
+
+			if (IsValid(BullCowUserWidgetInstance))
+			{
+				BullCowUserWidgetInstance->AddToViewport();
+			}
+		}
 	}
+
+	return BullCowUserWidgetInstance;
 }
